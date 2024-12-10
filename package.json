@@ -6,14 +6,12 @@
   },
   "version": "3.6.3",
   "description": "",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc",
     "pack:prod": "npm pack",
     "prepack": "npm run build",
-    "prepublishOnly": "npm run prepack && react-native verify-package-harmony --package-path . --skip-checks oh_package_name_is_derived_from_npm_package_name",
-    "update_version": "node ./scripts/update-version.js",
-    "deploy": "node ./scripts/deploy.js"
+    "prepublishOnly": "npm run prepack && react-native verify-package-harmony --package-path . --skip-checks oh_package_name_is_derived_from_npm_package_name"
   },
   "peerDependencies": {
     "react": "*",
